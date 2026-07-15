@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "patches": [
     {
       "name": "Complete Icon Config Export",
@@ -13,7 +13,7 @@
     {
       "name": "Enable Icon Pack Export to ZIP",
       "description": "Ensures custom icon packs are exported as editable ZIP files with PNG icons and JSON2 config files.",
-      "default": true,
+      "default": false,
       "dependencies": [],
       "compatiblePackages": null,
       "options": []
@@ -56,7 +56,7 @@
     {
       "name": "Safe Icon Pack Re-import with Validation",
       "description": "Adds integrity validation during custom icon import to prevent data loss from corrupted ZIPs.",
-      "default": true,
+      "default": false,
       "dependencies": [],
       "compatiblePackages": null,
       "options": []

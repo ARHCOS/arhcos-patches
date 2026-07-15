@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/ARHCOS/arhcos-patches/compare/v1.0.1...v1.0.2) (2026-07-15)
+
+### 🐛 Bug Fixes
+
+* disable patches pending fingerprint verification ([b41ee2f](https://github.com/ARHCOS/arhcos-patches/commit/b41ee2f97ee263b1fd56ecde56a9d7c12d79fd32))
+
 ## [1.0.1](https://github.com/ARHCOS/arhcos-patches/compare/v1.0.0...v1.0.1) (2026-07-15)
 
 ### 🐛 Bug Fixes
