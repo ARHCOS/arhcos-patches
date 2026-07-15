@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/ARHCOS/arhcos-patches/compare/v1.1.0...v1.1.1) (2026-07-15)
+
+### 🐛 Bug Fixes
+
+* disable Theme Park patches - fingerprints corrupt bytecode ([1e4432a](https://github.com/ARHCOS/arhcos-patches/commit/1e4432aca394feb4b3d7257cdc05e89d19605c71))
+* empty repo - no patches ([15511c5](https://github.com/ARHCOS/arhcos-patches/commit/15511c580170b02b54b2393045eab5eb5b949b6b))
+* safe version - all patches disabled ([4ca2065](https://github.com/ARHCOS/arhcos-patches/commit/4ca2065ca3c5534a6b060643060911edfa4b86c3))
+
 ## [1.1.0](https://github.com/ARHCOS/arhcos-patches/compare/v1.0.3...v1.1.0) (2026-07-15)
 
 ### 🐛 Bug Fixes
