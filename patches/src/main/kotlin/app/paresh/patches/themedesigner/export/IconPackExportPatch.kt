@@ -1,29 +1,22 @@
 package app.paresh.patches.themedesigner.export
 
-import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
 
 /**
- * Theme Park Icon Pack Export Patches
+ * Theme Park Icon Pack Export Patches - DISABLED
  * 
- * STATUS: Currently disabled - fingerprints need verification against actual smali bytecode
+ * These patches are currently disabled because they cause the app to crash on startup.
+ * The fingerprints need to be properly verified against the actual smali bytecode
+ * before they can be safely enabled.
  * 
- * The Samsung Theme Park app (com.samsung.android.themedesigner) has the capability to export
- * and import custom icon packs, but the export/import functionality may be restricted or require
- * specific conditions to be met.
+ * Issue: Adding any logging hooks via addInstructions() appears to break the app initialization,
+ * possibly by interfering with method resolution or causing bytecode corruption.
  * 
- * These patches are placeholders. To make them functional:
- * 1. Verify the actual method signatures in classes2.dex for:
- *    - RestoreWorker.doWork() - uses Kotlin suspend function signature
- *    - BackupWorker.doWork() - uses Kotlin suspend function signature
- *    - IconPackCreateTask methods
- * 2. Update fingerprints with correct return types, access flags, and parameter types
- * 3. Test fingerprints against the smali bytecode before enabling patches
- * 
- * Current findings:
- * - RestoreWorker.doWork signature: public doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
- * - These are Kotlin suspend functions, not simple void/boolean methods
- * - Requires different fingerprinting approach
+ * To fix:
+ * 1. Analyze if the issue is with the fingerprints themselves (not matching correctly)
+ * 2. Test with simpler patches (just return-early instead of inline smali)
+ * 3. Verify the smali syntax is correct
+ * 4. Check if the target methods are being called during app startup
  */
 
 @Suppress("unused")
@@ -32,10 +25,8 @@ val enableIconPackExportPatch = bytecodePatch(
     description = "Ensures custom icon packs are exported as editable ZIP files with PNG icons and JSON2 config files.",
     default = false
 ) {
-    execute {
-        // Placeholder - needs proper fingerprint verification
-        // SaveIconPackFingerprint.method.apply { ... }
-    }
+    // Disabled - causes startup crash
+    execute { }
 }
 
 @Suppress("unused")
@@ -44,10 +35,8 @@ val safeIconReimportPatch = bytecodePatch(
     description = "Adds integrity validation during custom icon import to prevent data loss from corrupted ZIPs.",
     default = false
 ) {
-    execute {
-        // Placeholder - needs proper fingerprint verification
-        // RestoreWorkerDoWorkFingerprint.method.apply { ... }
-    }
+    // Disabled - causes startup crash
+    execute { }
 }
 
 @Suppress("unused")
@@ -56,8 +45,6 @@ val completeConfigExportPatch = bytecodePatch(
     description = "Ensures icon pack exports include all app filters, drawables, and shader parameters in JSON2 format.",
     default = false
 ) {
-    execute {
-        // Placeholder - needs proper fingerprint verification
-        // SaveJsonFingerprint.method.apply { ... }
-    }
+    // Disabled - causes startup crash
+    execute { }
 }
