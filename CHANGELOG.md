@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/ARHCOS/arhcos-patches/compare/v1.0.2...v1.0.3) (2026-07-15)
+
+### 🐛 Bug Fixes
+
+* all patches disabled due to startup crash ([e2beab2](https://github.com/ARHCOS/arhcos-patches/commit/e2beab2da6cd68ae47847c69e0649ef052d29a0b))
+* disable all patches - they cause app startup crash ([047fb48](https://github.com/ARHCOS/arhcos-patches/commit/047fb4884ae979236e0a7b694f8d99092cc00a9c))
+
 ## [1.0.2](https://github.com/ARHCOS/arhcos-patches/compare/v1.0.1...v1.0.2) (2026-07-15)
 
 ### 🐛 Bug Fixes

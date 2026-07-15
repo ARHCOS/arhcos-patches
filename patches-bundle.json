@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-15T21:19:30",
-  "description": "## [1.0.2](https://github.com/ARHCOS/arhcos-patches/compare/v1.0.1...v1.0.2) (2026-07-15)\n\n### 🐛 Bug Fixes\n\n* disable patches pending fingerprint verification ([b41ee2f](https://github.com/ARHCOS/arhcos-patches/commit/b41ee2f97ee263b1fd56ecde56a9d7c12d79fd32))",
-  "download_url": "https://github.com/ARHCOS/arhcos-patches/releases/download/v1.0.2/patches-1.0.2.mpp",
+  "created_at": "2026-07-15T21:25:59",
+  "description": "## [1.0.3](https://github.com/ARHCOS/arhcos-patches/compare/v1.0.2...v1.0.3) (2026-07-15)\n\n### 🐛 Bug Fixes\n\n* all patches disabled due to startup crash ([e2beab2](https://github.com/ARHCOS/arhcos-patches/commit/e2beab2da6cd68ae47847c69e0649ef052d29a0b))\n* disable all patches - they cause app startup crash ([047fb48](https://github.com/ARHCOS/arhcos-patches/commit/047fb4884ae979236e0a7b694f8d99092cc00a9c))",
+  "download_url": "https://github.com/ARHCOS/arhcos-patches/releases/download/v1.0.3/patches-1.0.3.mpp",
   "signature_download_url": "",
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
