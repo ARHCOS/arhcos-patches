@@ -56,10 +56,13 @@ val safeIconReimportPatch = bytecodePatch(
 @Suppress("unused")
 val completeConfigExportPatch = bytecodePatch(
     name = "Complete Icon Config Export",
-    description = "Ensures icon pack exports include all app filters, drawables, and shader parameters in JSON2 format."
+    description = "Ensures icon pack exports include all app filters, drawables, and shader parameters in JSON2 format.",
+    default = false
 ) {
     execute {
-        SaveJsonFingerprint.method.apply {
+        // This fingerprint may not exist in all versions
+        // Skip gracefully if not found
+        SaveJsonFingerprint.methodOrNull?.apply {
             addInstructions(0, """
                 const-string v0, "IconPackJSON"
                 const-string v1, "Exporting complete icon pack config to JSON2"
