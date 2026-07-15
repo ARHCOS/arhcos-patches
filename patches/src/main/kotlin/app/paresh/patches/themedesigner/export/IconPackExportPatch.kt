@@ -4,52 +4,49 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
 
 /**
- * Enables export of custom icon packs to ZIP format with PNG images and JSON2 config.
+ * Theme Park Icon Pack Export Patches
  * 
- * The app already has production-grade export functionality via BackupWorker/IconPackCreateTask.
- * These patches ensure the export/import pipeline works correctly and safely.
+ * STATUS: Currently disabled - fingerprints need verification against actual smali bytecode
+ * 
+ * The Samsung Theme Park app (com.samsung.android.themedesigner) has the capability to export
+ * and import custom icon packs, but the export/import functionality may be restricted or require
+ * specific conditions to be met.
+ * 
+ * These patches are placeholders. To make them functional:
+ * 1. Verify the actual method signatures in classes2.dex for:
+ *    - RestoreWorker.doWork() - uses Kotlin suspend function signature
+ *    - BackupWorker.doWork() - uses Kotlin suspend function signature
+ *    - IconPackCreateTask methods
+ * 2. Update fingerprints with correct return types, access flags, and parameter types
+ * 3. Test fingerprints against the smali bytecode before enabling patches
+ * 
+ * Current findings:
+ * - RestoreWorker.doWork signature: public doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+ * - These are Kotlin suspend functions, not simple void/boolean methods
+ * - Requires different fingerprinting approach
  */
 
 @Suppress("unused")
 val enableIconPackExportPatch = bytecodePatch(
     name = "Enable Icon Pack Export to ZIP",
-    description = "Ensures custom icon packs are exported as editable ZIP files with PNG icons and JSON2 config files."
+    description = "Ensures custom icon packs are exported as editable ZIP files with PNG icons and JSON2 config files.",
+    default = false
 ) {
     execute {
-        SaveIconPackFingerprint.method.apply {
-            addInstructions(0, """
-                const-string v0, "IconPackExport"
-                const-string v1, "save() called for icon pack"
-                invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-                move-result v0
-            """)
-        }
+        // Placeholder - needs proper fingerprint verification
+        // SaveIconPackFingerprint.method.apply { ... }
     }
 }
 
 @Suppress("unused")
 val safeIconReimportPatch = bytecodePatch(
     name = "Safe Icon Pack Re-import with Validation",
-    description = "Adds integrity validation during custom icon import to prevent data loss from corrupted ZIPs."
+    description = "Adds integrity validation during custom icon import to prevent data loss from corrupted ZIPs.",
+    default = false
 ) {
     execute {
-        RestoreWorkerDoWorkFingerprint.method.apply {
-            addInstructions(0, """
-                const-string v0, "IconPackRestore"
-                const-string v1, "Starting icon pack restore with validation"
-                invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-                move-result v0
-            """)
-        }
-
-        GTSUtilExtractFingerprint.method.apply {
-            addInstructions(0, """
-                const-string v0, "IconPackExtract"
-                const-string v1, "Validating ZIP file before extraction"
-                invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-                move-result v0
-            """)
-        }
+        // Placeholder - needs proper fingerprint verification
+        // RestoreWorkerDoWorkFingerprint.method.apply { ... }
     }
 }
 
@@ -60,15 +57,7 @@ val completeConfigExportPatch = bytecodePatch(
     default = false
 ) {
     execute {
-        // This fingerprint may not exist in all versions
-        // Skip gracefully if not found
-        SaveJsonFingerprint.methodOrNull?.apply {
-            addInstructions(0, """
-                const-string v0, "IconPackJSON"
-                const-string v1, "Exporting complete icon pack config to JSON2"
-                invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-                move-result v0
-            """)
-        }
+        // Placeholder - needs proper fingerprint verification
+        // SaveJsonFingerprint.method.apply { ... }
     }
 }
