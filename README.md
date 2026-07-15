@@ -11,7 +11,7 @@ TODO: Update this about section with a brief introduction/summary about this rep
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.3](https://github.com/ARHCOS/arhcos-patches/releases/tag/v1.0.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;4 patches total
+> **[v1.1.0](https://github.com/ARHCOS/arhcos-patches/releases/tag/v1.1.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;3 patches total
 <details open>
 <summary>📦 XYZ app&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -28,14 +28,13 @@ TODO: Update this about section with a brief introduction/summary about this rep
 </details>
 
 <details open>
-<summary>🌐 Universal&nbsp;&nbsp;•&nbsp;&nbsp;3 patches</summary>
+<summary>🌐 Universal&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
 <br>
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
-| [Complete Icon Config Export](#complete-icon-config-export) | Ensures icon pack exports include all app filters, drawables, and shader parameters in JSON2 format. |  |
-| [Enable Icon Pack Export to ZIP](#enable-icon-pack-export-to-zip) | Ensures custom icon packs are exported as editable ZIP files with PNG icons and JSON2 config files. |  |
-| [Safe Icon Pack Re-import with Validation](#safe-icon-pack-re-import-with-validation) | Adds integrity validation during custom icon import to prevent data loss from corrupted ZIPs. |  |
+| [Log Icon Backup Operations](#log-icon-backup-operations) | Adds logging for icon pack backup operations |  |
+| [Log Icon Restore Operations](#log-icon-restore-operations) | Adds logging for icon pack restore operations |  |
 
 </details>
 

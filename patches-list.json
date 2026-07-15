@@ -1,23 +1,7 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "patches": [
-    {
-      "name": "Complete Icon Config Export",
-      "description": "Ensures icon pack exports include all app filters, drawables, and shader parameters in JSON2 format.",
-      "default": false,
-      "dependencies": [],
-      "compatiblePackages": null,
-      "options": []
-    },
-    {
-      "name": "Enable Icon Pack Export to ZIP",
-      "description": "Ensures custom icon packs are exported as editable ZIP files with PNG icons and JSON2 config files.",
-      "default": false,
-      "dependencies": [],
-      "compatiblePackages": null,
-      "options": []
-    },
     {
       "name": "Example Patch",
       "description": "Example patch to start with.",
@@ -54,9 +38,17 @@
       "options": []
     },
     {
-      "name": "Safe Icon Pack Re-import with Validation",
-      "description": "Adds integrity validation during custom icon import to prevent data loss from corrupted ZIPs.",
-      "default": false,
+      "name": "Log Icon Backup Operations",
+      "description": "Adds logging for icon pack backup operations",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": null,
+      "options": []
+    },
+    {
+      "name": "Log Icon Restore Operations",
+      "description": "Adds logging for icon pack restore operations",
+      "default": true,
       "dependencies": [],
       "compatiblePackages": null,
       "options": []

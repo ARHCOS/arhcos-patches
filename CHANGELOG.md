@@ -1,3 +1,13 @@
+## [1.1.0](https://github.com/ARHCOS/arhcos-patches/compare/v1.0.3...v1.1.0) (2026-07-15)
+
+### 🐛 Bug Fixes
+
+* remove broken patches ([8f68fe2](https://github.com/ARHCOS/arhcos-patches/commit/8f68fe2216a9f89fe212a3d1fd3e03e0277412fa))
+
+### ✨ New Features
+
+* add verified fingerprints and simple logging patches for Theme Park ([f93bf59](https://github.com/ARHCOS/arhcos-patches/commit/f93bf592f1f1586480f6e8bb0c6cf20cd1d1816a))
+
 ## [1.0.3](https://github.com/ARHCOS/arhcos-patches/compare/v1.0.2...v1.0.3) (2026-07-15)
 
 ### 🐛 Bug Fixes
